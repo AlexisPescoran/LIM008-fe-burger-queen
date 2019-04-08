@@ -1,0 +1,74 @@
+[
+    {
+        "item": "Café americano",
+        "value": 5.00,
+        "option": "Desayuno"
+    },
+    {
+        "item": "Café con leche",
+        "value": 7.00,
+        "option": "Desayuno"   
+    },
+    {
+        "item": "Sandwich de jamón y queso",
+        "value": 10.00,
+        "option": "Desayuno"
+    },
+    {
+        "item": "Jugo de frutas",
+        "value": 7.00,
+        "option": "Desayuno"
+    },
+    {
+        "item": "Hamburguesa simple",
+        "value": 10.00,
+        "option": "Comida"
+    },
+    {
+        "item": "Hamburguesa doble",
+        "value": 15.00,
+        "option": "Comida"
+    },
+    {
+        "item": "Res",
+        "option": "Opciones"
+    },
+    {
+        "item": "Pollo",
+        "option": "Opciones"
+    },
+    {
+        "item": "Vegetariana",
+        "option": "Opciones"
+    },
+    {
+        "item": "Queso",
+        "value": 1.00,
+        "option": "Extras"
+    },
+    {
+        "item": "Huevo",
+        "value": 1.00,
+        "option": "Extras"
+    },
+    {
+        "item": "Agua 500ml",
+        "value": 5.00,
+        "option": "Bebidas"
+    },
+    {
+        "item": "Agua 750ml",
+        "value": 7.00,
+        "option": "Bebidas"
+    },
+    {
+        "item": "Gaseosa 500ml",
+        "value": 7.00,
+        "option": "Bebidas"
+    },
+    {
+        "item": "Gaseosa 750ml",
+        "value": 10.00,
+        "option": "Bebidas"
+    }
+]
