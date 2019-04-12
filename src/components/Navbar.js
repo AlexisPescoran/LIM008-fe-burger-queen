@@ -50,24 +50,7 @@ const Navbar = (props) => {
   return(
     <div>
       {/* <p>You clicked {count} times</p> */}
-      <button onClick={() =><tbody>
-                {props.data.length > 0 ? (
-                  props.data.map(user => (
-                    <tr key={user.item}>
-                      <td>{user.value}</td>
-                      <td>{user.option}</td>
-                      <td>
-                        <button className="button muted-button">Edit</button>
-                        <button className="button muted-button">Delete</button>
-                      </td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan={3}>No users</td>
-                  </tr>
-                )}
-              </tbody>}>
+      <button onClick={() => alert('prueba Desayuno')}>
         Desayuno
       </button>     
       <button onClick={() => alert('prueba Comida')}>
@@ -80,7 +63,8 @@ const Navbar = (props) => {
         Acompañamiento
       </button>
     </div>
-  )
   
+  )
+    
 }
 export default Navbar
