@@ -34,13 +34,17 @@ const App = () => {
   });
 
   // const [users, setUsers] = useState(data)
+  const addPedido = d => {
+    d.item = data.length + 1
+    setData([...data, d])
+  }
 
   return (
     <div className="col-12">
       <Header />
       <div className="row">
         <div className="col-6">
-          <Navbar data = {data}/>
+          <Navbar addPedido = {addPedido}/>
         </div>
         <div className="col-6">
           <Pedido data = {data}/>

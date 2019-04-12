@@ -1,72 +1,87 @@
 [
     {
+        "id": 0,
         "item": "Café americano",
         "value": 5.00,
         "option": "Desayuno"
     },
     {
+        "id": 0,
         "item": "Café con leche",
         "value": 7.00,
         "option": "Desayuno"   
     },
     {
+        "id": 0,
         "item": "Sandwich de jamón y queso",
         "value": 10.00,
         "option": "Desayuno"
     },
     {
+        "id": 0,
         "item": "Jugo de frutas",
         "value": 7.00,
         "option": "Desayuno"
     },
     {
+        "id": 0,
         "item": "Hamburguesa simple",
         "value": 10.00,
         "option": "Comida"
     },
     {
+        "id": 0,
         "item": "Hamburguesa doble",
         "value": 15.00,
         "option": "Comida"
     },
     {
+        "id": 0,
         "item": "Res",
         "option": "Opciones"
     },
     {
+        "id": 0,
         "item": "Pollo",
         "option": "Opciones"
     },
     {
+        "id": 0,
         "item": "Vegetariana",
         "option": "Opciones"
     },    
     {
+        "id": 0,
         "item": "Queso",
         "value": 1.00,
         "option": "Extras"
     },
     {
+        "id": 0,
         "item": "Huevo",
         "value": 1.00,
         "option": "Extras"
     },
     {
+        "id": 0,
         "item": "Agua 500ml",
         "value": 5.00,
         "option": "Bebidas"
     },
     {
+        "id": 0,
         "item": "Agua 750ml",
         "value": 7.00,
         "option": "Bebidas"
     },
     {
+        "id": 0,
         "item": "Gaseosa 500ml",
         "value": 7.00,
         "option": "Bebidas"
     },
     {
+        "id": 0,
         "item": "Gaseosa 750ml",
         "value": 10.00,
         "option": "Bebidas"

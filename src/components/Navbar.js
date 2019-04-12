@@ -46,13 +46,28 @@ import './css/Navbar.css';
 
 
 /*EJEMPLO*/
-const Navbar = (props) => {
-  const [prueba, setPrueba] = useState([]);
-  
+const Navbar = (props) => {  
   return(
     <div>
       {/* <p>You clicked {count} times</p> */}
-      <button onClick={() =>setPrueba( <p>mostrar algo</p>)}>
+      <button onClick={() =><tbody>
+                {props.data.length > 0 ? (
+                  props.data.map(user => (
+                    <tr key={user.item}>
+                      <td>{user.value}</td>
+                      <td>{user.option}</td>
+                      <td>
+                        <button className="button muted-button">Edit</button>
+                        <button className="button muted-button">Delete</button>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={3}>No users</td>
+                  </tr>
+                )}
+              </tbody>}>
         Desayuno
       </button>     
       <button onClick={() => alert('prueba Comida')}>
