@@ -16,14 +16,18 @@ const App = () => {
       });
   });
 
-  
+  const getOption = (option) => {
+    setData.filter(ele => ele.option === option)
+  }
+
+
 
   return (
     <div className="col-12">
       <Header />
       <div className="row">
         <div className="col-6">
-          <Navbar />
+          <Navbar getOption = {getOption}/>
         </div>
         <div className="col-6">
           <Pedido data = {data}/>

@@ -6,21 +6,18 @@ export default function Pedido(props) {
         <table>
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Username</th>
-                  <th>Actions</th>
+                  <th>Item</th>
+                  <th>Costo</th>
+                  <th>Menú</th>
                 </tr>
               </thead>
               <tbody>
                 {props.data.length > 0 ? (
                   props.data.map(user => (
                     <tr key={user.item}>
+                      <td>{user.item}</td>
                       <td>{user.value}</td>
-                      <td>{user.option}</td>
-                      <td>
-                        <button className="button muted-button">Edit</button>
-                        <button className="button muted-button">Delete</button>
-                      </td>
+                      <td>{user.option}</td>                      
                     </tr>
                   ))
                 ) : (
