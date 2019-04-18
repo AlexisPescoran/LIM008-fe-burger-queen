@@ -6,10 +6,10 @@ const Menu = ({ menu }) => {
             <table>
             <tr>
                 <div>
-                    <td><button name="Desayuno" onClick={menu}>desayuno</button></td>
-                    <td><button name="Comida" onClick={menu}>almuerzo</button></td>
-                    <td><button name="Bebidas" onClick={menu}>bebidas</button></td>
-                    <td><button name="Extras" onClick={menu}>extras</button></td>
+                    <td><button name="Desayuno" onClick={menu}>Desayuno</button></td>
+                    <td><button name="Comida" onClick={menu}>Almuerzo</button></td>
+                    <td><button name="Bebidas" onClick={menu}>Bebidas</button></td>
+                    <td><button name="Extras" onClick={menu}>Extras</button></td>                    
                 </div>
             </tr>
         </table>            

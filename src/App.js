@@ -20,11 +20,19 @@ class App extends Component {
     const { food } = this.state;
     const foodFiltered = food.filter(({option})=> option === name);
     this.setState({typesFood: foodFiltered})
+    console.log(name, food, foodFiltered)
   }
 
-  prueba = (elem) => {
+  updateList = (elem) => {
     const { pedido } = this.state;
     this.setState({ pedido: [...pedido, elem]})
+  }
+
+  deleteItem = (idToDelete) => {
+    const {pedido} = this.state;
+    this.setState({pedido: pedido.filter(({id}) => id !== idToDelete)})
+    // console.log('probando item', item);
+    
   }
 
   componentDidMount() {    
@@ -34,8 +42,8 @@ class App extends Component {
   }
 
   render() {
-    const {typesFood}= this.state;
-
+    const {typesFood, pedido}= this.state;
+  
     return (
       <div className="col-12">
       <Header />
@@ -43,26 +51,13 @@ class App extends Component {
         <div className="col-6">
 
           <Menu menu={this.updateTypeFood} />
-          {typesFood.length
-            ? typesFood.map((elem, i) => {
-              const { item, value } = elem;
-              return (
-                <p key={i}>
-                  {item} <br />
-                  {value}
-                  <button onClick={() => {this.prueba(elem)}}>add</button>
-                </p>
-              )
-            })
-            :<p>Cargando ...</p>
-            }
+          <ListaMenu typesFood = {typesFood} updateList = {this.updateList}/>
         </div>
         <div className="col-6">
-          <Pedido />
+          <Pedido pedido={pedido} deleteItem = {this.deleteItem} />
         </div>
       </div>
     </div>
-
       
     );
   }
