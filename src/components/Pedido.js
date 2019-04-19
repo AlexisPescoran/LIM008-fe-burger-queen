@@ -3,15 +3,14 @@ import React from 'react'
 const Pedido = ({pedido, deleteItem, addItem}) => {
     return(
         <div>
-            <label>Cliente</label>
-            <input type = "text"></input>
             {pedido.length
             ? pedido.map((elem, i) => {
-              const { item, value } = elem;
+              const { item, value, cantidad } = elem;
               return (
                 <p key={i}>
                   {item} <br />
-                  {value}
+                  {value} <br />
+                  {cantidad}
                   <button onClick={() => {deleteItem(elem.id)}}>-</button>
                   <button onClick={() => {addItem(elem.id)}}>+</button>
                 </p>

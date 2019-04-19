@@ -3,7 +3,7 @@ import './css/Header.css';
 
 export default function Header () {
     return(
-        <header class="page-header">
+        <header className="page-header">
             <h1>BurgerQueen <small>te atendemos al instante</small></h1>
         </header>
     );
