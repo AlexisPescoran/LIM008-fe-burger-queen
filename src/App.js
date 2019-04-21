@@ -21,12 +21,22 @@ class App extends Component {
     const { food } = this.state;
     const foodFiltered = food.filter(({ option }) => option === name);
     this.setState({ typesFood: foodFiltered })
-    console.log(name, food, foodFiltered)
   }
 
   updateList = (elem) => {
     const { pedido } = this.state;
-    this.setState({ pedido: [...pedido, elem] })
+   
+    console.log('ver el pedido inicial ', pedido);
+
+    if (pedido.find(({ id }) => id === elem.id)) {
+      elem.cantidad++
+    } else {
+      pedido.push(elem)
+    }
+
+    this.setState({ pedido })
+
+    
   }
 
   deleteItem = (idToDelete) => {
@@ -34,16 +44,19 @@ class App extends Component {
     this.setState({ pedido: pedido.filter(({ id }) => id !== idToDelete) })
   }
 
+  
   addItem = (idToIncrease) => {
     const { pedido } = this.state;
-    pedido.forEach(obj => {
-      if (obj.id === idToIncrease) {
-        obj.cantidad = obj.cantidad + 1
-      }
-    })
-    this.setState({ pedido })
-  }
+    console.log('ver pedido ', pedido);
 
+    pedido.forEach(obj => {
+     if (obj.id === idToIncrease)
+        obj.cantidad = obj.cantidad + 1
+        
+    })
+    this.setState({ pedido: [...pedido] })
+  }
+  
   componentDidMount() {
     const carta = data.default;
     const filterDefault = carta.filter(({ option }) => option === 'Desayuno');
@@ -52,7 +65,7 @@ class App extends Component {
 
   render() {
     const { typesFood, pedido } = this.state;
-
+   
     return (
       <div className="col-12">
         <Header />
