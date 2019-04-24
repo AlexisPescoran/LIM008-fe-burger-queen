@@ -3,102 +3,87 @@
         "id": 0,
         "item": "Café americano",
         "value": 5.00,
-        "option": "Desayuno",
-        "cantidad": 0
+        "option": "Desayuno"
     },
     {
         "id": 1,
         "item": "Café con leche",
         "value": 7.00,
-        "option": "Desayuno",
-        "cantidad": 0   
+        "option": "Desayuno"
     },
     {
         "id": 2,
         "item": "Sandwich de jamón y queso",
         "value": 10.00,
-        "option": "Desayuno",
-        "cantidad": 0
+        "option": "Desayuno"
     },
     {
         "id": 3,
         "item": "Jugo de frutas",
         "value": 7.00,
-        "option": "Desayuno",
-        "cantidad": 0
+        "option": "Desayuno"
     },
     {
         "id": 4,
         "item": "Hamburguesa simple",
         "value": 10.00,
-        "option": "Comida",
-        "cantidad": 0
+        "option": "Comida"
     },
     {
         "id": 5,
         "item": "Hamburguesa doble",
         "value": 15.00,
-        "option": "Comida",
-        "cantidad": 0
+        "option": "Comida"
     },
     {
         "id": 6,
         "item": "Res",
-        "option": "Opciones",
-        "cantidad": 0
+        "option": "Opciones"
     },
     {
         "id": 7,
         "item": "Pollo",
-        "option": "Opciones",
-        "cantidad": 0
+        "option": "Opciones"
     },
     {
         "id": 8,
         "item": "Vegetariana",
-        "option": "Opciones",
-        "cantidad": 0
+        "option": "Opciones"
     },    
     {
         "id": 9,
         "item": "Queso",
         "value": 1.00,
-        "option": "Extras",
-        "cantidad": 0
+        "option": "Extras"
     },
     {
         "id": 10,
         "item": "Huevo",
         "value": 1.00,
-        "option": "Extras",
-        "cantidad": 0
+        "option": "Extras"
     },
     {
         "id": 11,
         "item": "Agua 500ml",
         "value": 5.00,
-        "option": "Bebidas",
-        "cantidad": 0
+        "option": "Bebidas"
     },
     {
         "id": 12,
         "item": "Agua 750ml",
         "value": 7.00,
-        "option": "Bebidas",
-        "cantidad": 0
+        "option": "Bebidas"
     },
     {
         "id": 13,
         "item": "Gaseosa 500ml",
         "value": 7.00,
-        "option": "Bebidas",
-        "cantidad": 0
+        "option": "Bebidas"
     },
     {
         "id": 14,
         "item": "Gaseosa 750ml",
         "value": 10.00,
-        "option": "Bebidas",
-        "cantidad": 0
+        "option": "Bebidas"
     }
 ]

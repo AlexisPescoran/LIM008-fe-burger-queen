@@ -30,6 +30,7 @@
     "eslint-plugin-class-property": "^1.1.0",
     "eslint-plugin-import": "^2.17.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.12.4"
   }
 }

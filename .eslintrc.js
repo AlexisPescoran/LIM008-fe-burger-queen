@@ -18,17 +18,16 @@ module.exports = {
       },
       plugins: [
         'react',
-        'react-class-properties',
+        'class-property',
         'jest'
       ],
       rules: {
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-        'react-hooks/rules-of-hooks': 'error',
-        'react-hooks/exhaustive-deps': 'warn',
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error"
+        "jest/valid-expect": "error",
+        "linebreak-style": 0,
       }
 };
