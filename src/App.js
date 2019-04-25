@@ -49,6 +49,21 @@ class App extends Component {
     const { pedido } = this.state;
     this.setState({ pedido: pedido.filter(({ id }) => id !== idToDelete) })
   }
+  decreaseItem = (idToDecrease) => {
+    const { pedido } = this.state;
+    const newPedido = pedido.map((item) => {
+      if (item.id === idToDecrease && item.cantidad > 1) {
+        return {
+          ...item,
+          cantidad: item.cantidad - 1,
+        }
+      } else {
+        return item;
+      }
+    })
+    // this.setState({pedido})
+    this.setState({ pedido: newPedido})
+  }
 
   addItem = (idToIncrease) => {
     const { pedido } = this.state;
@@ -88,7 +103,7 @@ class App extends Component {
           </div>
           <div className="col-6">
             <Cliente />
-            <Pedido pedido={pedido} deleteItem={this.deleteItem} addItem={this.addItem} />
+            <Pedido pedido={pedido} deleteItem={this.deleteItem} addItem={this.addItem} decreaseItem={this.decreaseItem}/>
           </div>
         </div>
       </div>
