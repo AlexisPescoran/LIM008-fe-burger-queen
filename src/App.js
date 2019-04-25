@@ -25,7 +25,6 @@ class App extends Component {
 
   updateList = (elem) => {
     const { pedido } = this.state;       
-    console.log('ver el pedido inicial ', pedido);
     
     if (pedido.find(({ id }) => id === elem.id)) {
       const newPedido = pedido.map((item) => {
@@ -33,6 +32,7 @@ class App extends Component {
           return {
             ...item,
             cantidad: item.cantidad + 1,
+            value: (item.cantidad + 1) * elem.value,
           }
         } else {
           return item;
@@ -43,12 +43,14 @@ class App extends Component {
       pedido.push({...elem, cantidad:1})
       this.setState({ pedido })
     }    
+    // console.log('quiero ver la cantidad ', item.cantidad)
   }
 
   deleteItem = (idToDelete) => {
     const { pedido } = this.state;
     this.setState({ pedido: pedido.filter(({ id }) => id !== idToDelete) })
   }
+
   decreaseItem = (idToDecrease) => {
     const { pedido } = this.state;
     const newPedido = pedido.map((item) => {
@@ -67,12 +69,12 @@ class App extends Component {
 
   addItem = (idToIncrease) => {
     const { pedido } = this.state;
-    console.log('ver pedido ', pedido);
     const newPedido = pedido.map((item) => {
       if (item.id === idToIncrease) {
         return {
           ...item,
           cantidad: item.cantidad + 1,
+          // value: item.cantidad  * item.value,
         }
       } else {
         return item;
@@ -81,7 +83,6 @@ class App extends Component {
     // this.setState({pedido})
     this.setState({ pedido: newPedido}) //is it necessary?porque me sale lo mismo
   }
-  
   
   componentDidMount() {
     const carta = data.default;
