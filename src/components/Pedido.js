@@ -10,7 +10,7 @@ const Pedido = ({pedido, deleteItem, addItem, decreaseItem}) => {
             <p key={elem.id}>
               {item}
               <br />
-              {value}
+              {value * cantidad}
               <br />
               {cantidad}
               <button type="button" onClick={() => { deleteItem(elem.id)}}>x</button>
