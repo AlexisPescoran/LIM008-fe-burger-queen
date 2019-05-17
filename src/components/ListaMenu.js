@@ -2,7 +2,6 @@ import React from 'react';
 
 const ListaMenu = ({ typesFood, updateList }) => (
   <div>
-    <p>LISTA_MENU</p>
     {typesFood.length
       ? typesFood.map((elem) => {
         const { item, value } = elem;

@@ -16,5 +16,3 @@ const Total = ({ pedido }) => {
 };
 
 export default Total;
-// {/* <p>{totalCount}</p> */}
-{/* <button type="button" name="Desayuno" onClick={totalCount}>ver cuenta</button> */}

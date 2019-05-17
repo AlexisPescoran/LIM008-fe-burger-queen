@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Menu from './components/Menu'
 import Cliente from './components/Cliente'
@@ -14,6 +13,7 @@ class App extends Component {
     food: [],
     typesFood: [],
     pedido: [],
+    dinerName: ''
   }
 
   //Actualizar la opción de comida
@@ -36,7 +36,6 @@ class App extends Component {
             ...item,
             cantidad: item.cantidad + 1,
             value: item.value,
-            // value: (item.cantidad + 1) * elem.value,
           }
         } else {
           return item;
@@ -48,12 +47,7 @@ class App extends Component {
 
       pedido.push({...elem, cantidad:1})
       this.setState({ pedido })
-    } 
-    console.log('ver el pedido ', pedido)
-    
-    // this.setState({count: pedido.reduce((acumulador, {value}) => acumulador + value, 0)})
-    // console.log('ver acumulador ', elem.acumulador);
-    
+    }     
   }
 
   deleteItem = (idToDelete) => {
@@ -73,7 +67,6 @@ class App extends Component {
         return item;
       }
     })
-    // this.setState({pedido})
     this.setState({ pedido: newPedido})
   }
 
@@ -95,14 +88,11 @@ class App extends Component {
     this.setState({ pedido: newPedido}) //is it necessary?porque me sale lo mismo
   }
   
-  // totalCount = () => {
-  //   const {pedido} = this.state;
-  //   console.log('ver el pedido ', pedido);
-  //   // const total = 1;
-  //   const total = pedido.reduce((acumulador, { value }) => acumulador + value, 0)
-  //   console.log('ver el total ', total)
-  //   this.setState({count: total});
-  // }
+  updateName = (event) => {
+    const {dinerName} = this.state;
+    this.setState({dinerName: event.target.value})
+    console.log('ver nombre ', dinerName)
+  }
   componentDidMount() {
     const carta = data.default;
     const filterDefault = carta.filter(({ option }) => option === 'Desayuno');
@@ -110,8 +100,7 @@ class App extends Component {
   }
 
   render() {
-    const { typesFood, pedido } = this.state;
-    console.log('ver el pedido', pedido)
+    const { typesFood, pedido} = this.state;
     return (
       <div className="col-12">
         <Header />
@@ -122,7 +111,7 @@ class App extends Component {
             <ListaMenu typesFood={typesFood} updateList={this.updateList} />
           </div>
           <div className="col-6">
-            <Cliente />
+            <Cliente updateName={this.updateName}/>
             <Pedido pedido={pedido} deleteItem={this.deleteItem} addItem={this.addItem} decreaseItem={this.decreaseItem}/>
             <Total  pedido={pedido} /> 
           </div>
